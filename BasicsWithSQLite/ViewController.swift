@@ -19,7 +19,18 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
+    @IBAction func saveData(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func selectData(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func deleteData(_ sender: UIButton) {
+        
+    }
 }
 

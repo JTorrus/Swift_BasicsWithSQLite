@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,53 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BasicsWithSQLite" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BSx-4W-NaC">
+                                <rect key="frame" x="144.5" y="313" width="86" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="SELECT"/>
+                                <connections>
+                                    <action selector="selectData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ccM-Au-6VV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gbu-3Q-URt">
+                                <rect key="frame" x="147" y="264" width="81" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="INSERT"/>
+                                <connections>
+                                    <action selector="saveData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uZl-gy-eiO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ak-hW-DE2">
+                                <rect key="frame" x="145" y="361.5" width="85" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="DELETE"/>
+                                <connections>
+                                    <action selector="deleteData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="52b-h2-nhj"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5ak-hW-DE2" secondAttribute="trailing" constant="145" id="1NB-EB-mFo"/>
+                            <constraint firstItem="BSx-4W-NaC" firstAttribute="top" secondItem="Gbu-3Q-URt" secondAttribute="bottom" constant="8" id="9jC-ke-IyN"/>
+                            <constraint firstItem="BSx-4W-NaC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9uK-LQ-Mqm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Gbu-3Q-URt" secondAttribute="trailing" constant="147" id="FW9-LO-chF"/>
+                            <constraint firstItem="Gbu-3Q-URt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="147" id="Tyw-rv-rfu"/>
+                            <constraint firstItem="5ak-hW-DE2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="145" id="eG2-Ve-6sp"/>
+                            <constraint firstItem="5ak-hW-DE2" firstAttribute="top" secondItem="BSx-4W-NaC" secondAttribute="bottom" constant="8" id="ivf-am-hcu"/>
+                            <constraint firstItem="BSx-4W-NaC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q5W-lz-RXe"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
         </scene>
     </scenes>
 </document>
